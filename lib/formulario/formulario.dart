@@ -16,7 +16,11 @@ enum animalPreferido { Cao, Gato }
 class _FormularioState extends State<Formulario> {
   final _nameController = TextEditingController();
   final _idadeController = TextEditingController();
+  final _emailController = TextEditingController();
   final _cidadeController = TextEditingController();
+  final _enderecoController = TextEditingController();
+  final _bairroController = TextEditingController();
+  final _estadoController = TextEditingController();
   possuiPet _possuiPet = possuiPet.yes;
   moradia _moradia = moradia.Casa;
   animalPreferido _animalPreferido = animalPreferido.Cao;
@@ -47,10 +51,42 @@ class _FormularioState extends State<Formulario> {
             height: 10,
           ),
           CampoFormulario(
+              textInputType: TextInputType.emailAddress,
+              nameController: _emailController,
+              label: 'Email',
+              erro: 'Coloque Seu Email'),
+          SizedBox(
+            height: 10,
+          ),
+          CampoFormulario(
+              textInputType: TextInputType.text,
+              nameController: _enderecoController,
+              label: 'Endereço',
+              erro: 'Coloque Seu Endereço'),
+          SizedBox(
+            height: 10,
+          ),
+          CampoFormulario(
+              textInputType: TextInputType.text,
+              nameController: _bairroController,
+              label: 'Bairo',
+              erro: 'Coloque Seu Bairro'),
+          SizedBox(
+            height: 10,
+          ),
+          CampoFormulario(
               textInputType: TextInputType.text,
               nameController: _cidadeController,
               label: 'Cidade',
               erro: 'Coloque Sua Cidade'),
+          SizedBox(
+            height: 10,
+          ),
+          CampoFormulario(
+              textInputType: TextInputType.text,
+              nameController: _estadoController,
+              label: 'Estado',
+              erro: 'Coloque Seu Estado'),
           SizedBox(
             height: 10,
           ),
