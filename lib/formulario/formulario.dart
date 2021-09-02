@@ -69,7 +69,7 @@ class _FormularioState extends State<Formulario> {
           CampoFormulario(
               textInputType: TextInputType.text,
               nameController: _bairroController,
-              label: 'Bairo',
+              label: 'Bairro',
               erro: 'Coloque Seu Bairro'),
           SizedBox(
             height: 10,
