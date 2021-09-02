@@ -9,6 +9,8 @@ class BodyFormulario extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
           'Formulário',
@@ -26,18 +28,14 @@ class BodyFormulario extends StatelessWidget {
           style: TextStyle(
             color: KPrimaryColor,
           ),
+          textAlign: TextAlign.center,
         ),
         Text(
-          'Após o preenchimento, lhe informaremos se você está apto a adotar um animalzinho e as',
+          'Após o preenchimento, lhe informaremos se você está apto a adotar um animalzinho e as melhores dicas para cuidar dele!',
           style: TextStyle(
             color: KPrimaryColor,
           ),
-        ),
-        Text(
-          'melhores dicas para cuidar dele!',
-          style: TextStyle(
-            color: KPrimaryColor,
-          ),
+          textAlign: TextAlign.center,
         ),
         SizedBox(
           height: 10,
