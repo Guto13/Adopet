@@ -1,5 +1,9 @@
+import 'package:adopet/classes/animal.dart';
+import 'package:adopet/classes/formularioClasse.dart';
+import 'package:adopet/classes/resultado.dart';
 import 'package:adopet/componentes_gerais/constants.dart';
 import 'package:adopet/formulario/campo_formulario.dart';
+import 'package:adopet/resultado/resultado_screen.dart';
 import 'package:flutter/material.dart';
 
 class Formulario extends StatefulWidget {
@@ -21,6 +25,7 @@ class _FormularioState extends State<Formulario> {
   final _enderecoController = TextEditingController();
   final _bairroController = TextEditingController();
   final _estadoController = TextEditingController();
+  final _numeroPets = TextEditingController();
   possuiPet _possuiPet = possuiPet.yes;
   moradia _moradia = moradia.Casa;
   animalPreferido _animalPreferido = animalPreferido.Cao;
@@ -30,6 +35,9 @@ class _FormularioState extends State<Formulario> {
 
   @override
   Widget build(BuildContext context) {
+    Resultado _resultadoFinal = Resultado();
+    Animal _animal = Animal();
+    FormularioClasse _formularioClasse = FormularioClasse();
     return Form(
       key: _formKey,
       child: Column(
@@ -146,6 +154,16 @@ class _FormularioState extends State<Formulario> {
               ),
             ),
           ),
+          SizedBox(
+            height: 10,
+          ),
+          _possuiPet == possuiPet.yes
+              ? CampoFormulario(
+                  textInputType: TextInputType.number,
+                  nameController: _numeroPets,
+                  label: 'Quantos?',
+                  erro: 'Coloque o Numero de pets')
+              : Container(),
           SizedBox(
             height: 10,
           ),
@@ -313,7 +331,156 @@ class _FormularioState extends State<Formulario> {
           InkWell(
             onTap: () {
               if (_formKey.currentState!.validate()) {
-                print('object');
+                _resultadoFinal.podeAdotar = true;
+                if (_currentRangeValues.end < 1000) {
+                  print("Não pode adotar");
+                  _resultadoFinal.podeAdotar = false;
+                } else if (_currentRangeValues.end <= 2000) {
+                  if (_possuiPet == possuiPet.yes) {
+                    var aux = int.parse(_numeroPets.text) * 250;
+                    aux = _currentRangeValues.end.toInt() - aux;
+                    if (aux > 1000) {
+                      if (_animalPreferido == animalPreferido.Cao) {
+                        print("Cão porte pequeno");
+                        _animal.porte = 'pequeno';
+                        _animal.tipo = 'cão';
+                      } else {
+                        print("Gato");
+                        _animal.porte = 'pequeno';
+                        _animal.tipo = 'gato';
+                      }
+                    } else {
+                      print("Não pode adotar");
+                      _resultadoFinal.podeAdotar = false;
+                    }
+                  } else {
+                    if (_animalPreferido == animalPreferido.Cao) {
+                      print("Cão porte pequeno");
+                      _animal.porte = 'pequeno';
+                      _animal.tipo = 'cão';
+                    } else {
+                      print("Gato");
+                      _animal.porte = 'pequeno';
+                      _animal.tipo = 'gato';
+                    }
+                  }
+                } else if (_currentRangeValues.end <= 2500) {
+                  if (_possuiPet == possuiPet.yes) {
+                    var aux = int.parse(_numeroPets.text) * 250;
+                    aux = _currentRangeValues.end.toInt() - aux;
+                    if (aux > 1000) {
+                      if (_moradia == moradia.Apartamento) {
+                        if (_animalPreferido == animalPreferido.Cao) {
+                          print("Cão porte pequeno");
+                          _animal.porte = 'pequeno';
+                          _animal.tipo = 'cão';
+                        } else {
+                          print("Gato");
+                          _animal.porte = 'pequeno';
+                          _animal.tipo = 'gato';
+                        }
+                      } else {
+                        if (_animalPreferido == animalPreferido.Cao) {
+                          print("Cão porte pequeno ou médio");
+                          _animal.porte = 'medio';
+                          _animal.tipo = 'cão';
+                        } else {
+                          print("Gato");
+                          _animal.porte = 'pequeno';
+                          _animal.tipo = 'gato';
+                        }
+                      }
+                    } else {
+                      print("Não pode adotar");
+                      _resultadoFinal.podeAdotar = false;
+                    }
+                  } else {
+                    if (_moradia == moradia.Apartamento) {
+                      if (_animalPreferido == animalPreferido.Cao) {
+                        print("Cão porte pequeno");
+                        _animal.porte = 'pequeno';
+                        _animal.tipo = 'cão';
+                      } else {
+                        print("Gato");
+                        _animal.porte = 'pequeno';
+                        _animal.tipo = 'gato';
+                      }
+                    } else {
+                      if (_animalPreferido == animalPreferido.Cao) {
+                        print("Cão porte pequeno, médio");
+                        _animal.porte = 'medio';
+                        _animal.tipo = 'cão';
+                      } else {
+                        print("Gato");
+                        _animal.porte = 'pequeno';
+                        _animal.tipo = 'gato';
+                      }
+                    }
+                  }
+                } else {
+                  if (_possuiPet == possuiPet.yes) {
+                    var aux = int.parse(_numeroPets.text) * 250;
+
+                    aux = _currentRangeValues.end.toInt() - aux;
+                    if (aux > 1000) {
+                      if (_moradia == moradia.Apartamento) {
+                        if (_animalPreferido == animalPreferido.Cao) {
+                          print("Cão porte pequeno");
+                          _animal.porte = 'pequeno';
+                          _animal.tipo = 'cão';
+                        } else {
+                          print("Gato");
+                          _animal.porte = 'pequeno';
+                          _animal.tipo = 'gato';
+                        }
+                      } else {
+                        if (_animalPreferido == animalPreferido.Cao) {
+                          print("Cão de qualquer porte");
+                          _animal.porte = 'grande';
+                          _animal.tipo = 'cão';
+                        } else {
+                          print("Gato");
+                          _animal.porte = 'pequeno';
+                          _animal.tipo = 'gato';
+                        }
+                      }
+                    } else {
+                      print("Não pode adotar");
+                      _resultadoFinal.podeAdotar = false;
+                    }
+                  } else {
+                    if (_moradia == moradia.Apartamento) {
+                      if (_animalPreferido == animalPreferido.Cao) {
+                        print("Cão porte pequeno");
+                        _animal.porte = 'pequeno';
+                        _animal.tipo = 'cão';
+                      } else {
+                        print("Gato");
+                        _animal.porte = 'pequeno';
+                        _animal.tipo = 'gato';
+                      }
+                    } else {
+                      if (_animalPreferido == animalPreferido.Cao) {
+                        print("Cão de qualquer porte");
+                        _animal.porte = 'grande';
+                        _animal.tipo = 'cão';
+                      } else {
+                        print("Gato");
+                        _animal.porte = 'pequeno';
+                        _animal.tipo = 'gato';
+                      }
+                    }
+                  }
+                }
+                _formularioClasse.nome = _nameController.text;
+                _formularioClasse.idade = int.parse(_idadeController.text);
+                _formularioClasse.email = _emailController.text;
+                _resultadoFinal.animal = _animal;
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ResultadoScreen(_resultadoFinal,_formularioClasse)),
+                );
               }
             },
             child: Container(
