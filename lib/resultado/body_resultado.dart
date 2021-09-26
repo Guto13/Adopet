@@ -1,6 +1,7 @@
 import 'package:adopet/classes/formularioClasse.dart';
 import 'package:adopet/classes/resultado.dart';
 import 'package:adopet/componentes_gerais/constants.dart';
+import 'package:adopet/videos/videos_screen.dart';
 import 'package:flutter/material.dart';
 
 class BodyResultado extends StatelessWidget {
@@ -98,6 +99,34 @@ class BodyResultado extends StatelessWidget {
                 );
               }
             },
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        VideosScreen(resultadoFinal, formulario)),
+              );
+            },
+            child: Container(
+              height: 30,
+              width: 200,
+              decoration: BoxDecoration(
+                color: KButtonColor,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Center(
+                child: Text(
+                  'Videos',
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
           ),
         ],
       ),

@@ -7,7 +7,7 @@ class Resultado {
   late bool podeAdotar;
   late Animal animal;
   late String generoAnimal;
-  late Dica dicas;
-  late Video videos;
+  late List<Dica> dicas;
+  late List<Video> videos;
   late Artigo artigos;
 }

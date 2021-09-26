@@ -2,6 +2,7 @@ import 'package:adopet/classes/animal.dart';
 import 'package:adopet/classes/formularioClasse.dart';
 import 'package:adopet/classes/resultado.dart';
 import 'package:adopet/componentes_gerais/constants.dart';
+import 'package:adopet/dicas/dicas_screen.dart';
 import 'package:adopet/formulario/campo_formulario.dart';
 import 'package:adopet/resultado/resultado_screen.dart';
 import 'package:flutter/material.dart';
@@ -331,6 +332,7 @@ class _FormularioState extends State<Formulario> {
           InkWell(
             onTap: () {
               if (_formKey.currentState!.validate()) {
+                _resultadoFinal.dicas = dicasCao;
                 _resultadoFinal.podeAdotar = true;
                 if (_currentRangeValues.end < 1000) {
                   print("Não pode adotar");
@@ -344,10 +346,13 @@ class _FormularioState extends State<Formulario> {
                         print("Cão porte pequeno");
                         _animal.porte = 'pequeno';
                         _animal.tipo = 'cão';
+                        _resultadoFinal.videos = videosCaoPequeno;
                       } else {
                         print("Gato");
                         _animal.porte = 'pequeno';
                         _animal.tipo = 'gato';
+                        _resultadoFinal.dicas = dicasGato;
+                        _resultadoFinal.videos = videosGatos;
                       }
                     } else {
                       print("Não pode adotar");
@@ -358,10 +363,13 @@ class _FormularioState extends State<Formulario> {
                       print("Cão porte pequeno");
                       _animal.porte = 'pequeno';
                       _animal.tipo = 'cão';
+                      _resultadoFinal.videos = videosCaoPequeno;
                     } else {
                       print("Gato");
                       _animal.porte = 'pequeno';
                       _animal.tipo = 'gato';
+                      _resultadoFinal.dicas = dicasGato;
+                      _resultadoFinal.videos = videosGatos;
                     }
                   }
                 } else if (_currentRangeValues.end <= 2500) {
@@ -374,20 +382,26 @@ class _FormularioState extends State<Formulario> {
                           print("Cão porte pequeno");
                           _animal.porte = 'pequeno';
                           _animal.tipo = 'cão';
+                          _resultadoFinal.videos = videosCaoPequeno;
                         } else {
                           print("Gato");
                           _animal.porte = 'pequeno';
                           _animal.tipo = 'gato';
+                          _resultadoFinal.dicas = dicasGato;
+                          _resultadoFinal.videos = videosGatos;
                         }
                       } else {
                         if (_animalPreferido == animalPreferido.Cao) {
                           print("Cão porte pequeno ou médio");
                           _animal.porte = 'medio';
                           _animal.tipo = 'cão';
+                          _resultadoFinal.videos = videosCaoMedio;
                         } else {
                           print("Gato");
                           _animal.porte = 'pequeno';
                           _animal.tipo = 'gato';
+                          _resultadoFinal.dicas = dicasGato;
+                          _resultadoFinal.videos = videosGatos;
                         }
                       }
                     } else {
@@ -400,20 +414,26 @@ class _FormularioState extends State<Formulario> {
                         print("Cão porte pequeno");
                         _animal.porte = 'pequeno';
                         _animal.tipo = 'cão';
+                        _resultadoFinal.videos = videosCaoPequeno;
                       } else {
                         print("Gato");
                         _animal.porte = 'pequeno';
                         _animal.tipo = 'gato';
+                        _resultadoFinal.dicas = dicasGato;
+                        _resultadoFinal.videos = videosGatos;
                       }
                     } else {
                       if (_animalPreferido == animalPreferido.Cao) {
                         print("Cão porte pequeno, médio");
                         _animal.porte = 'medio';
                         _animal.tipo = 'cão';
+                        _resultadoFinal.videos = videosCaoMedio;
                       } else {
                         print("Gato");
                         _animal.porte = 'pequeno';
                         _animal.tipo = 'gato';
+                        _resultadoFinal.dicas = dicasGato;
+                        _resultadoFinal.videos = videosGatos;
                       }
                     }
                   }
@@ -428,20 +448,26 @@ class _FormularioState extends State<Formulario> {
                           print("Cão porte pequeno");
                           _animal.porte = 'pequeno';
                           _animal.tipo = 'cão';
+                          _resultadoFinal.videos = videosCaoPequeno;
                         } else {
                           print("Gato");
                           _animal.porte = 'pequeno';
                           _animal.tipo = 'gato';
+                          _resultadoFinal.dicas = dicasGato;
+                          _resultadoFinal.videos = videosGatos;
                         }
                       } else {
                         if (_animalPreferido == animalPreferido.Cao) {
                           print("Cão de qualquer porte");
                           _animal.porte = 'grande';
                           _animal.tipo = 'cão';
+                          _resultadoFinal.videos = videosCaoGrande;
                         } else {
                           print("Gato");
                           _animal.porte = 'pequeno';
                           _animal.tipo = 'gato';
+                          _resultadoFinal.dicas = dicasGato;
+                          _resultadoFinal.videos = videosGatos;
                         }
                       }
                     } else {
@@ -454,20 +480,26 @@ class _FormularioState extends State<Formulario> {
                         print("Cão porte pequeno");
                         _animal.porte = 'pequeno';
                         _animal.tipo = 'cão';
+                        _resultadoFinal.videos = videosCaoPequeno;
                       } else {
                         print("Gato");
                         _animal.porte = 'pequeno';
                         _animal.tipo = 'gato';
+                        _resultadoFinal.dicas = dicasGato;
+                        _resultadoFinal.videos = videosGatos;
                       }
                     } else {
                       if (_animalPreferido == animalPreferido.Cao) {
                         print("Cão de qualquer porte");
                         _animal.porte = 'grande';
                         _animal.tipo = 'cão';
+                        _resultadoFinal.videos = videosCaoGrande;
                       } else {
                         print("Gato");
                         _animal.porte = 'pequeno';
                         _animal.tipo = 'gato';
+                        _resultadoFinal.dicas = dicasGato;
+                        _resultadoFinal.videos = videosGatos;
                       }
                     }
                   }
@@ -479,7 +511,8 @@ class _FormularioState extends State<Formulario> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => ResultadoScreen(_resultadoFinal,_formularioClasse)),
+                      builder: (context) =>
+                          ResultadoScreen(_resultadoFinal, _formularioClasse)),
                 );
               }
             },
