@@ -17,23 +17,19 @@ class _BodyVideosState extends State<BodyVideos> {
   final ScrollController _controllerOne = ScrollController();
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Center(
-      child: Scrollbar(
-        isAlwaysShown: true,
-        controller: _controllerOne,
-        child: ListView(
-          controller: _controllerOne,
-          scrollDirection: Axis.horizontal,
-          children: List.generate(widget.resultadoFinal.videos.length, (index) {
-            return Column(
+      child: Wrap(
+        children: [
+          for (var video in widget.resultadoFinal.videos)
+            Column(
               children: [
                 Container(
                   height: 300,
                   padding: EdgeInsets.all(10),
                   child: YoutubePlayerIFrame(
                     controller: YoutubePlayerController(
-                      initialVideoId:
-                          widget.resultadoFinal.videos[index].youtubeURL,
+                      initialVideoId: video.youtubeURL,
                       params: YoutubePlayerParams(
                         startAt: Duration(seconds: 0),
                         showControls: true,
@@ -44,9 +40,8 @@ class _BodyVideosState extends State<BodyVideos> {
                   ),
                 ),
               ],
-            );
-          }),
-        ),
+            ),
+        ],
       ),
     );
   }

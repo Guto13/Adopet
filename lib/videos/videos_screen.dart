@@ -51,9 +51,11 @@ class VideosScreen extends StatelessWidget {
         ),
       ),
       backgroundColor: KPrimaryColor,
-      body: Padding(
-        padding: EdgeInsets.only(top: 15),
-        child: BodyVideos(resultadoFinal, formulario),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.only(top: 15),
+          child: BodyVideos(resultadoFinal, formulario),
+        ),
       ),
     );
   }
