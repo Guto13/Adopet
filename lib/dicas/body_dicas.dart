@@ -23,6 +23,8 @@ class _BodyDicasState extends State<BodyDicas> {
             itemCount: widget.resultadoFinal.dicas.length,
             itemBuilder: (_, index) {
               return Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
                     padding: EdgeInsets.all(15),
@@ -34,35 +36,30 @@ class _BodyDicasState extends State<BodyDicas> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Wrap(
-                          children: [
-                            Text(
-                              widget.resultadoFinal.dicas[index].titulo,
-                              style: TextStyle(
-                                  color: KPrimaryColor,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Spacer(),
-                            IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  if (widget.resultadoFinal.dicas[index]
-                                      .statusAtivo) {
-                                    widget.resultadoFinal.dicas[index]
-                                        .statusAtivo = false;
-                                  } else {
-                                    widget.resultadoFinal.dicas[index]
-                                        .statusAtivo = true;
-                                  }
-                                });
-                              },
-                              icon: Icon(
-                                Icons.arrow_drop_down,
-                                color: KPrimaryColor,
-                              ),
-                            ),
-                          ],
+                        Text(
+                          widget.resultadoFinal.dicas[index].titulo,
+                          style: TextStyle(
+                              color: KPrimaryColor,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            setState(() {
+                              if (widget.resultadoFinal.dicas[index]
+                                  .statusAtivo) {
+                                widget.resultadoFinal.dicas[index]
+                                    .statusAtivo = false;
+                              } else {
+                                widget.resultadoFinal.dicas[index]
+                                    .statusAtivo = true;
+                              }
+                            });
+                          },
+                          icon: Icon(
+                            Icons.arrow_drop_down,
+                            color: KPrimaryColor,
+                          ),
                         ),
                         widget.resultadoFinal.dicas[index].statusAtivo
                             ? Text(
