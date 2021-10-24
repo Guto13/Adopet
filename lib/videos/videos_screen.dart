@@ -4,6 +4,7 @@ import 'package:adopet/classes/formularioClasse.dart';
 import 'package:adopet/classes/resultado.dart';
 import 'package:adopet/componentes_gerais/constants.dart';
 import 'package:adopet/dicas/dicas_screen.dart';
+import 'package:adopet/localizacao/localizacao_screen.dart';
 import 'package:adopet/videos/body_videos.dart';
 import 'package:flutter/material.dart';
 

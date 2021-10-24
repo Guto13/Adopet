@@ -14,10 +14,8 @@ class BodyVideos extends StatefulWidget {
 }
 
 class _BodyVideosState extends State<BodyVideos> {
-  final ScrollController _controllerOne = ScrollController();
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Center(
       child: Wrap(
         children: [

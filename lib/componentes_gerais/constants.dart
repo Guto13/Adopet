@@ -1,6 +1,8 @@
 import 'package:adopet/classes/dica.dart';
+import 'package:adopet/classes/marcadores.dart';
 import 'package:adopet/classes/video.dart';
 import 'package:flutter/material.dart';
+import 'package:google_maps/google_maps.dart';
 
 const KPrimaryColor = Color(0xFFe1fffb);
 const KButtonColor = Color(0xFF005349);
@@ -49,31 +51,52 @@ List<Dica> dicasCao = [
 ];
 
 List<Video> videosGatos = [
-  Video('','','awIeTS_DzKg',true),
-  Video('','','yLCM5W-BPj8',true),
-  Video('','','0dwAKew45rM',true),
-  Video('','','f2YHpvt_Rsw',true),
-  Video('','','O5zlRruXH4I',true),
+  Video('', '', 'awIeTS_DzKg', true),
+  Video('', '', 'yLCM5W-BPj8', true),
+  Video('', '', '0dwAKew45rM', true),
+  Video('', '', 'f2YHpvt_Rsw', true),
+  Video('', '', 'O5zlRruXH4I', true),
 ];
 
 List<Video> videosCaoPequeno = [
-  Video('','','GFgr2rvBJTM',true),
-  Video('','','C5bI36Kna0c',true),
-  Video('','','D-13sjRoLCU',true),
-  Video('','','dFv-YuRinOg',true),
-  Video('','','c1ZbCkcBKQI',true),
+  Video('', '', 'GFgr2rvBJTM', true),
+  Video('', '', 'C5bI36Kna0c', true),
+  Video('', '', 'D-13sjRoLCU', true),
+  Video('', '', 'dFv-YuRinOg', true),
+  Video('', '', 'c1ZbCkcBKQI', true),
 ];
 
 List<Video> videosCaoMedio = [
-  Video('','','NndC1KjSpx8',true),
-  Video('','','D-13sjRoLCU',true),
-  Video('','','dFv-YuRinOg',true),
-  Video('','','c1ZbCkcBKQI',true),
+  Video('', '', 'NndC1KjSpx8', true),
+  Video('', '', 'D-13sjRoLCU', true),
+  Video('', '', 'dFv-YuRinOg', true),
+  Video('', '', 'c1ZbCkcBKQI', true),
 ];
 
 List<Video> videosCaoGrande = [
-  Video('','','1f0oXrD9fR4',true),
-  Video('','','D-13sjRoLCU',true),
-  Video('','','dFv-YuRinOg',true),
-  Video('','','c1ZbCkcBKQI',true),
+  Video('', '', '1f0oXrD9fR4', true),
+  Video('', '', 'D-13sjRoLCU', true),
+  Video('', '', 'dFv-YuRinOg', true),
+  Video('', '', 'c1ZbCkcBKQI', true),
+];
+
+List<Marcadores> marcadores = [
+  Marcadores(LatLng(-30.04916632439482, -51.215777460058796),
+      'Associação Riograndense de Proteção aos Animais'),
+  Marcadores(LatLng(-30.075549766234268, -51.095508503355845),
+      'Associação 101 Viralatas'),
+  Marcadores(LatLng(-29.2260533514909, -51.34429640579082),
+      'Brechó da ONG dos peludos'),
+  Marcadores(LatLng(-28.97081679879693, -51.24788115788986),
+      'União Pela Vida Animal - Upeva'),
+  Marcadores(
+      LatLng(-29.16195393782421, -51.181664253377036), 'Associação VIDA'),
+  Marcadores(LatLng(-29.192512289499927, -51.13446931775026),
+      'Canil Municipal de Caxias do Sul'),
+  Marcadores(LatLng(-29.94954530767232, -50.974957807867995),
+      'Ong Collinnas- Adote um Amigo'),
+  Marcadores(LatLng(-29.426895087554705, -52.05707852919052), 'APAMA'),
+  Marcadores(LatLng(-29.988865599999983, -51.08801293902056), 'Arca do José'),
+  Marcadores(
+      LatLng(-30.219039167032435, -51.0751569155777), 'Majuna Proteção Animal'),
 ];
