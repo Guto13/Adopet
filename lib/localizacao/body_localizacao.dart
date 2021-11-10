@@ -1,7 +1,6 @@
 import 'package:adopet/componentes_gerais/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps/google_maps.dart';
-import 'package:google_maps/google_maps_places.dart';
 import 'dart:html';
 import 'dart:ui' as ui;
 import 'package:location/location.dart';

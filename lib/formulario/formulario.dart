@@ -507,6 +507,14 @@ class _FormularioState extends State<Formulario> {
                 _formularioClasse.nome = _nameController.text;
                 _formularioClasse.idade = int.parse(_idadeController.text);
                 _formularioClasse.email = _emailController.text;
+                _formularioClasse.endereco = _enderecoController.text;
+                _formularioClasse.bairro = _bairroController.text;
+                _formularioClasse.cidade = _cidadeController.text;
+                _formularioClasse.estado = _estadoController.text;
+                _formularioClasse.tipoMoradia =
+                    _moradia == moradia.Casa ? 'Casa' : 'Apartamento';
+                _formularioClasse.rendaFinal = _currentRangeValues.end.round();
+                _formularioClasse.animalPreferido = _animal.tipo;
                 _resultadoFinal.animal = _animal;
                 Navigator.push(
                   context,

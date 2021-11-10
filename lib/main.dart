@@ -1,3 +1,4 @@
+import 'package:adopet/downloads/downloads_screen.dart';
 import 'package:adopet/home.dart';
 import 'package:flutter/material.dart';
 import 'package:adopet/componentes_gerais/constants.dart';
