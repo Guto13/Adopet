@@ -50,7 +50,7 @@ class LocalizacaoScreen extends StatelessWidget {
           ),
           child: Center(
             child: Text(
-              'Dicas',
+              'Downloads',
               style:
                   TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),

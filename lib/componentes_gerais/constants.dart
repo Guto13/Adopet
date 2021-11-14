@@ -1,4 +1,5 @@
 import 'package:adopet/classes/dica.dart';
+import 'package:adopet/classes/informacao.dart';
 import 'package:adopet/classes/marcadores.dart';
 import 'package:adopet/classes/video.dart';
 import 'package:flutter/material.dart';
@@ -99,4 +100,50 @@ List<Marcadores> marcadores = [
   Marcadores(LatLng(-29.988865599999983, -51.08801293902056), 'Arca do José'),
   Marcadores(
       LatLng(-30.219039167032435, -51.0751569155777), 'Majuna Proteção Animal'),
+];
+
+List<Informacao> infoGatos = [
+  Informacao(
+      'Cuidados iniciais com seu gato',
+      'http://portalmelhoresamigos.com.br/cinco-cuidados-basicos-com-gatos-recem-adotados/#:~:text=VACINA%C3%87%C3%83O%20E%20VERMIFUGA%C3%87%C3%83O,up%20logo%20ap%C3%B3s%20a%20ado%C3%A7%C3%A3o.',
+      'assets/images/gato1.jpg'),
+  Informacao(
+      '7 Brincadeiras para fazer com seu gato',
+      'https://petpillow.com.br/7-brincadeiras-para-fazer-com-gato/',
+      'assets/images/gato_brincando.jpg'),
+  Informacao(
+      'Alimentação dos Gatos - Como proceder?',
+      'https://www.cachorrogato.com.br/gato/alimentacao-gatos/',
+      'assets/images/gato_comendo.jpg'),
+  Informacao(
+      'Gatinhos: cuidados especiais com os filhotes',
+      'http://portalmelhoresamigos.com.br/gatinhos-cuidados-especiais-com-os-filhotes/',
+      'assets/images/gato_filhote.jpg'),
+  Informacao(
+      'Crianças encontram nos gatos uma excelente companhia, mas precisam de supervisão',
+      'http://portalmelhoresamigos.com.br/saiba-por-que-o-gato-e-uma-excelente-companhia-para-seu-filho/',
+      'assets/images/gato_crianca.jpg'),
+];
+
+List<Informacao> infoCaes = [
+  Informacao(
+      'Tudo o que você precisa saber antes de adotar um cachorro',
+      'http://portalmelhoresamigos.com.br/dossie-da-adocao-o-que-voce-precisa-saber-antes-de-adotar-um-cachorro/',
+      'assets/images/cachorro1.jpg'),
+  Informacao(
+      'Benefícios dos exercícios físicos para cachorros',
+      'http://portalmelhoresamigos.com.br/beneficios-dos-exercicios-fisicos-para-cachorros/',
+      'assets/images/cachorro_brincando.jpg'),
+  Informacao(
+      'Quantos nutrientes seu cão ou gato precisa para ter uma vida saudável?',
+      'http://portalmelhoresamigos.com.br/quantos-nutrientes-seu-cao-ou-gato-precisa-para-ter-uma-vida-saudavel/',
+      'assets/images/cachorro_comendo.jpg'),
+  Informacao(
+      'De quais nutrientes o cão filhote mais precisa?',
+      'http://portalmelhoresamigos.com.br/de-quais-nutrientes-o-cao-filhote-mais-precisa/',
+      'assets/images/cachorro_filhote.jpg'),
+  Informacao(
+      'Como os cães podem auxiliar na educação das crianças?',
+      'http://portalmelhoresamigos.com.br/como-os-caes-podem-auxiliar-na-educacao-das-criancas/',
+      'assets/images/cachorro_crianca.jpg'),
 ];
