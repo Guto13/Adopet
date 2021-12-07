@@ -19,7 +19,7 @@ class BodyInformacoes extends StatelessWidget {
         padding: EdgeInsets.all(25),
         child: Wrap(
           children: [
-            Flexible(
+            Expanded(
               flex: 2,
               child: Container(
                 width: 500,
@@ -48,7 +48,7 @@ class BodyInformacoes extends StatelessWidget {
                 ),
               ),
             ),
-            Flexible(
+            Expanded(
               flex: 1,
               child: Container(
                 width: 300,
@@ -83,11 +83,4 @@ class BodyInformacoes extends StatelessWidget {
     );
   }
 
-  void _rodaURL(String _url) async {
-    if (await canLaunch(_url)) {
-      await launch(_url);
-    } else {
-      throw 'Não foi possível abrir o site $_url';
-    }
-  }
 }

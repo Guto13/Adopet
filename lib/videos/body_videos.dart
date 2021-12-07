@@ -29,6 +29,7 @@ class _BodyVideosState extends State<BodyVideos> {
                     controller: YoutubePlayerController(
                       initialVideoId: video.youtubeURL,
                       params: YoutubePlayerParams(
+                        autoPlay: false,
                         startAt: Duration(seconds: 0),
                         showControls: true,
                         showFullscreenButton: true,

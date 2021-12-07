@@ -335,37 +335,35 @@ class _FormularioState extends State<Formulario> {
                 _resultadoFinal.dicas = dicasCao;
                 _resultadoFinal.podeAdotar = true;
                 if (_currentRangeValues.end < 1000) {
-                  print("Não pode adotar");
                   _resultadoFinal.podeAdotar = false;
+                  _animal.porte = 'pequeno';
+                  _animal.tipo = 'gato';
                 } else if (_currentRangeValues.end <= 2000) {
                   if (_possuiPet == possuiPet.yes) {
                     var aux = int.parse(_numeroPets.text) * 250;
                     aux = _currentRangeValues.end.toInt() - aux;
                     if (aux > 1000) {
                       if (_animalPreferido == animalPreferido.Cao) {
-                        print("Cão porte pequeno");
                         _animal.porte = 'pequeno';
                         _animal.tipo = 'cão';
                         _resultadoFinal.videos = videosCaoPequeno;
                       } else {
-                        print("Gato");
                         _animal.porte = 'pequeno';
                         _animal.tipo = 'gato';
                         _resultadoFinal.dicas = dicasGato;
                         _resultadoFinal.videos = videosGatos;
                       }
                     } else {
-                      print("Não pode adotar");
                       _resultadoFinal.podeAdotar = false;
+                      _animal.porte = 'pequeno';
+                      _animal.tipo = 'gato';
                     }
                   } else {
                     if (_animalPreferido == animalPreferido.Cao) {
-                      print("Cão porte pequeno");
                       _animal.porte = 'pequeno';
                       _animal.tipo = 'cão';
                       _resultadoFinal.videos = videosCaoPequeno;
                     } else {
-                      print("Gato");
                       _animal.porte = 'pequeno';
                       _animal.tipo = 'gato';
                       _resultadoFinal.dicas = dicasGato;
@@ -379,12 +377,10 @@ class _FormularioState extends State<Formulario> {
                     if (aux > 1000) {
                       if (_moradia == moradia.Apartamento) {
                         if (_animalPreferido == animalPreferido.Cao) {
-                          print("Cão porte pequeno");
                           _animal.porte = 'pequeno';
                           _animal.tipo = 'cão';
                           _resultadoFinal.videos = videosCaoPequeno;
                         } else {
-                          print("Gato");
                           _animal.porte = 'pequeno';
                           _animal.tipo = 'gato';
                           _resultadoFinal.dicas = dicasGato;
@@ -392,12 +388,10 @@ class _FormularioState extends State<Formulario> {
                         }
                       } else {
                         if (_animalPreferido == animalPreferido.Cao) {
-                          print("Cão porte pequeno ou médio");
                           _animal.porte = 'medio';
                           _animal.tipo = 'cão';
                           _resultadoFinal.videos = videosCaoMedio;
                         } else {
-                          print("Gato");
                           _animal.porte = 'pequeno';
                           _animal.tipo = 'gato';
                           _resultadoFinal.dicas = dicasGato;
@@ -405,18 +399,17 @@ class _FormularioState extends State<Formulario> {
                         }
                       }
                     } else {
-                      print("Não pode adotar");
                       _resultadoFinal.podeAdotar = false;
+                      _animal.porte = 'pequeno';
+                      _animal.tipo = 'gato';
                     }
                   } else {
                     if (_moradia == moradia.Apartamento) {
                       if (_animalPreferido == animalPreferido.Cao) {
-                        print("Cão porte pequeno");
                         _animal.porte = 'pequeno';
                         _animal.tipo = 'cão';
                         _resultadoFinal.videos = videosCaoPequeno;
                       } else {
-                        print("Gato");
                         _animal.porte = 'pequeno';
                         _animal.tipo = 'gato';
                         _resultadoFinal.dicas = dicasGato;
@@ -424,12 +417,10 @@ class _FormularioState extends State<Formulario> {
                       }
                     } else {
                       if (_animalPreferido == animalPreferido.Cao) {
-                        print("Cão porte pequeno, médio");
                         _animal.porte = 'medio';
                         _animal.tipo = 'cão';
                         _resultadoFinal.videos = videosCaoMedio;
                       } else {
-                        print("Gato");
                         _animal.porte = 'pequeno';
                         _animal.tipo = 'gato';
                         _resultadoFinal.dicas = dicasGato;
@@ -445,12 +436,10 @@ class _FormularioState extends State<Formulario> {
                     if (aux > 1000) {
                       if (_moradia == moradia.Apartamento) {
                         if (_animalPreferido == animalPreferido.Cao) {
-                          print("Cão porte pequeno");
                           _animal.porte = 'pequeno';
                           _animal.tipo = 'cão';
                           _resultadoFinal.videos = videosCaoPequeno;
                         } else {
-                          print("Gato");
                           _animal.porte = 'pequeno';
                           _animal.tipo = 'gato';
                           _resultadoFinal.dicas = dicasGato;
@@ -458,12 +447,10 @@ class _FormularioState extends State<Formulario> {
                         }
                       } else {
                         if (_animalPreferido == animalPreferido.Cao) {
-                          print("Cão de qualquer porte");
                           _animal.porte = 'grande';
                           _animal.tipo = 'cão';
                           _resultadoFinal.videos = videosCaoGrande;
                         } else {
-                          print("Gato");
                           _animal.porte = 'pequeno';
                           _animal.tipo = 'gato';
                           _resultadoFinal.dicas = dicasGato;
@@ -471,18 +458,17 @@ class _FormularioState extends State<Formulario> {
                         }
                       }
                     } else {
-                      print("Não pode adotar");
                       _resultadoFinal.podeAdotar = false;
+                      _animal.porte = 'pequeno';
+                      _animal.tipo = 'gato';
                     }
                   } else {
                     if (_moradia == moradia.Apartamento) {
                       if (_animalPreferido == animalPreferido.Cao) {
-                        print("Cão porte pequeno");
                         _animal.porte = 'pequeno';
                         _animal.tipo = 'cão';
                         _resultadoFinal.videos = videosCaoPequeno;
                       } else {
-                        print("Gato");
                         _animal.porte = 'pequeno';
                         _animal.tipo = 'gato';
                         _resultadoFinal.dicas = dicasGato;
@@ -490,12 +476,10 @@ class _FormularioState extends State<Formulario> {
                       }
                     } else {
                       if (_animalPreferido == animalPreferido.Cao) {
-                        print("Cão de qualquer porte");
                         _animal.porte = 'grande';
                         _animal.tipo = 'cão';
                         _resultadoFinal.videos = videosCaoGrande;
                       } else {
-                        print("Gato");
                         _animal.porte = 'pequeno';
                         _animal.tipo = 'gato';
                         _resultadoFinal.dicas = dicasGato;
